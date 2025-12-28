@@ -16,6 +16,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {"message": "FastAPI server is running!"}
+
+
 @app.post("/convert")
 async def convert_docx(file: UploadFile = File(...)):
     contents = await file.read()
