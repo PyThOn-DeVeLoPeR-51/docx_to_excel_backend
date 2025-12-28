@@ -10,7 +10,7 @@ app = FastAPI()
 # Frontenddan so‘rov kelishi uchun CORS ni yoqamiz
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://docx-to-excel.vercel.app/"],  # xavfsizlik uchun keyin frontend domeni bilan almashtiring
+    allow_origins=["https://docx-to-excel.vercel.app"],  # xavfsizlik uchun keyin frontend domeni bilan almashtiring
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
